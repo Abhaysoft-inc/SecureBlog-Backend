@@ -9,8 +9,17 @@ const authRoutes = require('./routes/auth');
 const blogRoutes = require('./routes/blogback');
 const db = require('./config/db');
 
+// app.use(cors({
+//   origin: 'https://secureblog.onrender.com', // Replace with the actual origin of your frontend
+//   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//   credentials: true, // Allow cookies and session information to be sent
+//   optionsSuccessStatus: 204,
+//   credentials: true,
+//   exposedHeaders: ['set-cookie'],
+// }));
+
 app.use(cors({
-  origin: 'https://secureblog.onrender.com', // Replace with the actual origin of your frontend
+  origin: '*', // Replace with the actual origin of your frontend
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true, // Allow cookies and session information to be sent
   optionsSuccessStatus: 204,
